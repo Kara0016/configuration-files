@@ -1,0 +1,62 @@
+# ~/.config/starship.toml
+
+
+# Which is equivalent to
+format = """
+$username\
+$hostname\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$hg_branch\
+$docker_context\
+$deno\
+$nodejs\
+$python\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Set 'foo' as custom color palette
+palette = 'foo'
+
+# Define custom colors
+[palettes.foo]
+# Overwrite existing color
+blue = '21'
+# Define new color
+mustard = '#af8700'
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+
+
+[node]
+format = ""
+
+[git_branch]
+format = '\( [$symbol$branch(:$remote_branch)]($style) \) '
+
+[nodejs]
+format = '[$symbol($version )]($style) '
+
+[cmd_duration]
+format = '[$duration]($style) '
